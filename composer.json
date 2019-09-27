@@ -1,0 +1,47 @@
+{
+  "name": "bugfix/patchlayout",
+  "type": "typo3-cms-extension",
+  "description": "Patch for Backend Layout",
+  "license": "GPL-2.0+",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org"
+    }
+  ],
+  "keywords": [
+    "TYPO3 CMS",
+    "backend",
+    "layout"
+  ],
+  "support": {
+    "issues": "https://github.com/franzholz/patchlayout/issues"
+  },
+  "homepage": "https://jambage.com",
+  "authors": [
+    {
+      "name": "Franz Holzinger",
+      "role": "Developer",
+      "homepage": "https://ttproducts.de"
+    }
+  ],
+  "replace": {
+    "patchlayout": "self.version",
+    "typo3-ter/patchlayout": "self.version"
+  },
+  "require": {
+    "php": ">=7.0.0,<=7.99",
+    "typo3/cms-core": ">=8.6,<9.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bugfix\\Patchlayout\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "patchlayout"
+    }
+  }
+}
+
