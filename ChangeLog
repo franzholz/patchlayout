@@ -1,4 +1,5 @@
+2019-09-28 Franz Holzinger  <franz@ttproducts.de>
+    * alternative solution for TYPO3 9: Feature 82213 adds a hook.
 
 2019-09-27 Franz Holzinger  <franz@ttproducts.de>
-
     * Initial release

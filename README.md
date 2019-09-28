@@ -32,3 +32,12 @@ This will add the corresponding text for the column 1212 of extension 'myextensi
 ```
 
 
+## alternative solution in TYPO3 9:
+
+pointed out by Hendrik Reimers
+
+Since TYPO3 v9 a hook exists in order not to show the content in a general backend layout column and to avoid any error hints about invalid columns in the TYPO3 backend. This makes it possible to define your own column in the TCA for tt_content.
+
+[Feature #82213](https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/9.0/Feature-82213-NewHookToDetermineIfContentRecordIsUsedUnused.html)
+
+
