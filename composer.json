@@ -2,7 +2,6 @@
   "name": "bugfix/patchlayout",
   "type": "typo3-cms-extension",
   "description": "Patch for Backend Layout",
-  "license": "GPL-2.0+",
   "repositories": [
     {
       "type": "composer",
@@ -25,8 +24,11 @@
       "homepage": "https://ttproducts.de"
     }
   ],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
   "replace": {
-    "patchlayout": "self.version",
+    "bugfix/patchlayout": "self.version",
     "typo3-ter/patchlayout": "self.version"
   },
   "require": {
