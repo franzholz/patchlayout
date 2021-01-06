@@ -2,8 +2,11 @@
 
 ## What is does
 
-This extension shall fix the TYPO3 backend error message for a frontend plugin: **colPos: VALUE IS NOT ALLOWED ("1")**   
-**colPos: WERT IST NICHT ERLAUBT ("1")** .  
+This extension shall fix the TYPO3 backend error message for a frontend plugin: 
+
+**colPos: VALUE IS NOT ALLOWED ("1")**   
+**colPos: WERT IST NICHT ERLAUBT ("1")**   
+
 However it does not work if the extension gridelemnts is activated.
 
 The patch for the TYPO3 Backend Layout is inside of this extension.
