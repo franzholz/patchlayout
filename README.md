@@ -2,7 +2,11 @@
 
 ## What is does
 
-One patch for the TYPO3 Backend Layout is inside of this extension.
+This extension shall fix the TYPO3 backend error message for a frontend plugin: **colPos: VALUE IS NOT ALLOWED ("1")**   
+**colPos: WERT IST NICHT ERLAUBT ("1")** .  
+However it does not work if the extension gridelemnts is activated.
+
+The patch for the TYPO3 Backend Layout is inside of this extension.
 
 TYPO3 allows to add new item values of the colPos field in the table tt_content.
 By another extension can add its own column values to the selectable columns of the content element. Only be this means it can be avoided that this content element is shown in the front end by TYPO3 means. A special column value can be used by a third party extension to do its own content rendering for it.

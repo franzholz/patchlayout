@@ -35,7 +35,7 @@ class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
         $layout = $this->getSelectedBackendLayout($pageId);
         if ($layout && $layout['__items']) {
             if (is_array($layout['__items'])) {
-                $combinedItems = array();
+                $combinedItems = [];
                 foreach ($items as $item) {
                     foreach ($layout['__items'] as $layoutItem) {
                         if ($layoutItem['1'] == $item['1']) {
