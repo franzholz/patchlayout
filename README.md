@@ -7,12 +7,12 @@ This extension shall fix the TYPO3 backend error message for a frontend plugin:
 **colPos: VALUE IS NOT ALLOWED ("1")**   
 **colPos: WERT IST NICHT ERLAUBT ("1")**   
 
-However it does not work if the extension gridelements is activated.
+It seems even to work if the extension gridelements is activated.
 
 The patch for the TYPO3 Backend Layout is inside of this extension.
 
 TYPO3 allows to add new item values of the colPos field in the table tt_content.
-By another extension can add its own column values to the selectable columns of the content element. Only be this means it can be avoided that this content element is shown in the front end by TYPO3 means. A special column value can be used by a third party extension to do its own content rendering for it.
+Any another extension can add its own column values to the selectable columns of the content element. Only be this means it can be avoided that this content element is shown in the front end by means of TYPO3. A special column value can be used by a third party extension to do its own content rendering for it.
 
 Maybe there is another way to avoid that TYPO3 renders a content element. It would be fine if you would tell me how.
 However this is a proven way which has been working until TYPO3 6.2 by simply adding this TCA override.
@@ -39,11 +39,11 @@ This will add the corresponding text for the column 1212 of extension 'myextensi
 ```
 
 
-## alternative solution in TYPO3 9:
+## alternative solution since TYPO3 9:
 
 pointed out by Hendrik Reimers
 
-Since TYPO3 v9 a hook exists in order not to show the content in a general backend layout column and to avoid any error hints about invalid columns in the TYPO3 backend. This makes it possible to define your own column in the TCA for tt_content.
+A hook exists in order not to show the content inside of a general backend layout column and thus to avoid any error hints about invalid columns in the TYPO3 backend. This makes it possible to define your own column in the TCA for tt_content.
 
 [Feature #82213](https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/9.0/Feature-82213-NewHookToDetermineIfContentRecordIsUsedUnused.html)
 

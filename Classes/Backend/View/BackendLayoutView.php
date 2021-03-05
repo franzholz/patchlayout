@@ -51,5 +51,3 @@ class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
         return $items;
     }
 }
-
-
