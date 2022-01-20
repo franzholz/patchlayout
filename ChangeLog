@@ -1,5 +1,9 @@
+2022-01-20 Franz Holzinger  <franz@ttproducts.de>
+    * support for TYPO3 11.5
+    * The PHP version is not limited to PHP 7.4. PHP 8 is supported.
+
 2021-03-05 Franz Holzinger  <franz@ttproducts.de>
-    * The extension gridelements should be no problem.
+    * The extension gridelements shall be no problem.
 
 2020-01-06 Franz Holzinger  <franz@ttproducts.de>
     * support for TYPO3 10.4

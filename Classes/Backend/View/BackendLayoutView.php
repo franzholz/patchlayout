@@ -33,20 +33,22 @@ class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
     protected function addColPosListLayoutItems ($pageId, $items)
     {
         $layout = $this->getSelectedBackendLayout($pageId);
-        if ($layout && $layout['__items']) {
-            if (is_array($layout['__items'])) {
-                $combinedItems = [];
-                foreach ($items as $item) {
-                    foreach ($layout['__items'] as $layoutItem) {
-                        if ($layoutItem['1'] == $item['1']) {
-                            $combinedItems[] = $layoutItem;
-                            continue 2;
-                        }
+        if (
+            $layout &&
+            !empty($layout['__items']) &&
+            is_array($layout['__items'])
+        ) {
+            $combinedItems = [];
+            foreach ($items as $item) {
+                foreach ($layout['__items'] as $layoutItem) {
+                    if ($layoutItem['1'] == $item['1']) {
+                        $combinedItems[] = $layoutItem;
+                        continue 2;
                     }
-                    $combinedItems[] = $item;
                 }
-                $items = $combinedItems;
+                $combinedItems[] = $item;
             }
+            $items = $combinedItems;
         }
         return $items;
     }
