@@ -1,3 +1,6 @@
+2023-02-07 Franz Holzinger  <franz@ttproducts.de>
+    * support for TYPO3 12.3
+
 2022-01-20 Franz Holzinger  <franz@ttproducts.de>
     * support for TYPO3 11.5
     * The PHP version is not limited to PHP 7.4. PHP 8 is supported.
