@@ -42,7 +42,10 @@ class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
             $combinedItems = [];
             foreach ($items as $item) {
                 foreach ($layout['__items'] as $layoutItem) {
-                    if ($layoutItem['value'] == $item->getValue()) {
+                    if (
+                        !empty($layoutItem['value']) &&
+                        $layoutItem['value'] == $item->getValue()
+                    ) {
                         $combinedItems[] = $layoutItem;
                         continue 2;
                     }
