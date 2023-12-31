@@ -1,6 +1,6 @@
 <?php
-namespace Bugfix\Patchlayout\Backend\View;
 
+namespace Bugfix\Patchlayout\Backend\View;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -30,7 +30,7 @@ class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
      * @param array $items
      * @return array
      */
-    protected function addColPosListLayoutItems ($pageId, $items)
+    protected function addColPosListLayoutItems($pageId, $items)
     {
         $layout = $this->getSelectedBackendLayout($pageId);
         if (
