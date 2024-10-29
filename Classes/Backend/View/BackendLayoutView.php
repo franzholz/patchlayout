@@ -30,14 +30,14 @@ class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
      * @param array $items
      * @return array
      */
-    protected function addColPosListLayoutItems($pageId, $items)
+    protected function addColPosListLayoutItems(int $pageId, array $items): array
     {
         $layout = $this->getSelectedBackendLayout($pageId);
         if (
             $layout &&
             !empty($layout['__items']) &&
-            is_array($layout['__items']) &&
-            is_array($items)
+            is_countable($layout['__items']) &&
+            is_countable($items)
         ) {
             $combinedItems = [];
             foreach ($items as $item) {
