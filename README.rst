@@ -70,3 +70,5 @@ pointed out by Sebastian Klein
         }
       [end]
 
+Keep in mind that this condition will only work when creating new content elements. Only then the query string in the backend contains the colPos.
+Therefore, the condition can be used for adjusting TCAdefaults, but  not for TCEFORM settings.
