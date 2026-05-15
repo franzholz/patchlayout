@@ -31,7 +31,7 @@
     "typo3-ter/patchlayout": "self.version"
   },
   "require": {
-    "typo3/cms-core": "^13"
+    "typo3/cms-core": "^14"
   },
   "autoload": {
     "psr-4": {
@@ -40,7 +40,11 @@
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "patchlayout"
+      "extension-key": "patchlayout",
+        "version": "0.4.0",
+        "Package": {
+            "providesPackages": {}
+        }
     }
   }
 }
