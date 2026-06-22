@@ -41,10 +41,10 @@
   "extra": {
     "typo3/cms": {
       "extension-key": "patchlayout",
-        "version": "0.4.0",
-        "Package": {
-            "providesPackages": {}
-        }
+      "version": "0.4.0",
+      "Package": {
+        "providesPackages": {}
+      }
     }
   }
 }
