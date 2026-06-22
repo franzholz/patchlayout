@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Bugfix\Patchlayout\Backend\View;
 
 /*
@@ -21,7 +23,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Backend layout for CMS
  */
-class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
+#[Autoconfigure(public: true)]
+readonly class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
 {
     /**
      * Adds items to a colpos list
@@ -55,5 +58,19 @@ class BackendLayoutView extends \TYPO3\CMS\Backend\View\BackendLayoutView
             $items = $combinedItems;
         }
         return $items;
+    }
+
+    /**
+     * Gets colPos items to be shown in the forms engine.
+     * This method is called as "itemsProcFunc" with the accordant context
+     * for tt_content.colPos.
+     */
+    public function colPosListItemProcFunc(array &$parameters): void
+    {
+        $pageId = $this->determinePageId($parameters['table'], $parameters['row']);
+
+        if ($pageId !== false) {
+            $parameters['items'] = $this->addColPosListLayoutItems($pageId, $parameters['items']);
+        }
     }
 }

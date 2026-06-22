@@ -58,3 +58,17 @@ column in the TCA for tt_content.
 
 `Feature
 #82213 <https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/9.0/Feature-82213-NewHookToDetermineIfContentRecordIsUsedUnused.html>`__
+
+
+pointed out by Sebastian Klein
+
+::
+
+      [request && traverse(request.getQueryParams(),'defVals/tt_content/colPos') == 202]
+        TCAdefaults.tt_content {
+            vd_layout = aside-box
+        }
+      [end]
+
+Keep in mind that this condition will only work when creating new content elements. Only then the query string in the backend contains the colPos.
+Therefore, the condition can be used for adjusting TCAdefaults, but  not for TCEFORM settings.
