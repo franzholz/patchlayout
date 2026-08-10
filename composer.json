@@ -1,7 +1,7 @@
 {
   "name": "bugfix/patchlayout",
   "type": "typo3-cms-extension",
-  "description": "Patch for Backend Layout",
+  "description": "Patches for the Backend Layout - Implemented by XClass for the TYPO3 Core",
   "repositories": [
     {
       "type": "composer",
